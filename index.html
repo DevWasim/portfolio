@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wasim Khan | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #d4af37;
+      --black: #0a0a0a;
+      --white: #fff;
+      --blue: #1da1f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #1a1a1a, #000);
+      text-align: center;
+      position: relative;
+    }
+
+    .profile-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      object-fit: cover;
+      animation: fadeIn 2s ease;
+    }
+
+    .verified {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: var(--black);
+      padding-top: 2px;
+      padding-right: 2px;
+      padding-left: 2px;
+      border-radius: 50%;
+    }
+
+    .verified svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--blue);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: var(--gold);
+      animation: slideIn 1s ease forwards;
+      margin-top: 1rem;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    nav {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--gold);
+      font-weight: bold;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--gold);
+      transition: 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-left: 6px solid var(--gold);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--gold);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px var(--gold);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      background: #111;
+    }
+
+    a {
+      color: var(--gold);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="profile-container">
+    <img src="a.jpg" alt="Wasim Khan" class="profile" />
+    <span class="verified" title="Verified Profile">
+      <svg viewBox="0 0 24 24"><path d="M22.5 12l-2.2 1.6.3 2.7-2.6 1.2-1.1 2.5-2.8-.2L12 22.5l-1.6-2.2-2.7.3-1.2-2.6-2.5-1.1.2-2.8L1.5 12l2.2-1.6-.3-2.7 2.6-1.2 1.1-2.5 2.8.2L12 1.5l1.6 2.2 2.7-.3 1.2 2.6 2.5 1.1-.2 2.8 2.2 1.6zM10.3 16.6l7.1-7.1-1.4-1.4-5.7 5.7-2.1-2.1-1.4 1.4 3.5 3.5z"/></svg>
+    </span>
+  </div>
+  <h1>Wasim Khan</h1>
+  <p class="subtitle">Expert Laravel Developer | Python Programmer | Digital Creator</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm Wasim Khan, a Full Stack Web Developer from Bannu, Pakistan. I specialize in Laravel and Python, building smart, modern web apps that solve real problems. From OCR tools to school systems and management software, my goal is always clean code and a great user experience.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Languages</h2>
+  <div class="grid">
+    <div class="card">Python Programming</div>
+    <div class="card">Laravel & PHP</div>
+    <div class="card">Shopify Online Business</div>
+    <div class="card">Teaching & Mentoring</div>
+    <div class="card">Business Data Handling</div>
+    <div class="card">Languages: English, Urdu, Pashto</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Laravel Developer</strong><br>
+      Eziline Software House (Jul 2023 – Jan 2024)<br>
+      Developed responsive web apps and optimized backend performance using Laravel.
+    </div>
+    <div class="card">
+      <strong>Data Manager</strong><br>
+      VC Muhammad Khel Bannu (Aug 2019 – Apr 2023)<br>
+      Handled educational data and generated official certifications.
+    </div>
+    <div class="card">
+      <strong>Computer Teacher</strong><br>
+      Star Public School (Feb 2018 – Jul 2020)<br>
+      Taught students MS Office, graphic design, and basic IT concepts.
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid">
+    <div class="card">
+      BS in Computer Science<br>
+      University of Science and Technology, Bannu
+    </div>
+    <div class="card">
+      FSC in Computer Science<br>
+      Govt Degree College No. 2, Bannu (2018–2021)
+    </div>
+    <div class="card">
+      Web & Multimedia Design<br>
+      Star Public High School, Bannu
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Whatsapp:<a href="https://wa.me/+923191957302"> +92 319 1957302</a></p>
+  <p>Email: <a href="mailto:4fm302khan@gmail.com">4fm302khan@gmail.com</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/developerwasim/" target="_blank">@developerwasim</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Wasim Khan | All rights reserved
+</footer>
+
+</body>
+</html>
